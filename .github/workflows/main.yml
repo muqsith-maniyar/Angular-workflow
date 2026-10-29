@@ -1,0 +1,24 @@
+name: Bulid My Angular App
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-angular-App:
+     runs-on: Unbuntu-latest
+     
+     steps:
+       - uses: actions/checkout@v4.4.0
+       - name: setup Node JS
+         uses: actions/setup-node@v7.1.0
+         with: 
+           node-version: 22.x
+       - name: Install dependecies
+         run: npm istall
+       - name: Build Angular App
+         run: npm run build
+      
+      
+ 
+  
